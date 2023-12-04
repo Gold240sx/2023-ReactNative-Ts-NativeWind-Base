@@ -1,7 +1,13 @@
 import { Stack } from "expo-router"
 import { useEffect } from "react"
 import { View, StyleSheet } from "react-native"
-import { useFonts, Inter_900Black } from "@expo-google-fonts/inter"
+import {
+	useFonts,
+	Inter_900Black,
+	Inter_700Bold,
+	Inter_600SemiBold,
+	Inter_400Regular,
+} from "@expo-google-fonts/inter"
 import { Button } from "react-native-paper"
 import {
 	MD3LightTheme as DefaultTheme,
@@ -19,7 +25,10 @@ SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
 	const [fontsLoaded, fontError] = useFonts({
-		Inter: Inter_900Black,
+		Inter: Inter_400Regular,
+		InterSemi: Inter_600SemiBold,
+		InterBold: Inter_700Bold,
+		InterBlack: Inter_900Black,
 		Amatic: AmaticSC_400Regular,
 		AmaticBold: AmaticSC_700Bold,
 	})
