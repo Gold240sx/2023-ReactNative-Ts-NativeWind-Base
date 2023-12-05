@@ -17,6 +17,7 @@ import {
 	AmaticSC_400Regular,
 	AmaticSC_700Bold,
 } from "@expo-google-fonts/amatic-sc"
+import { GestureHandlerRootView } from "react-native-gesture-handler"
 // import store from "./store"
 
 import * as SplashScreen from "expo-splash-screen"
@@ -44,16 +45,18 @@ export default function RootLayout() {
 	}
 
 	return (
-		<PaperProvider theme={theme}>
-			{/* <PaperProvider store={store}> // if using something like redux*/}
+		<GestureHandlerRootView style={{ flex: 1 }}>
+			<PaperProvider theme={theme}>
+				{/* <PaperProvider store={store}> // if using something like redux*/}
 
-			<Stack screenOptions={{}}>
-				<Stack.Screen
-					name="index"
-					options={{ title: "RN-TS-NT-Base" }}
-				/>
-			</Stack>
-		</PaperProvider>
+				<Stack screenOptions={{}}>
+					<Stack.Screen
+						name="index"
+						options={{ title: "RN-TS-NT-Base" }}
+					/>
+				</Stack>
+			</PaperProvider>
+		</GestureHandlerRootView>
 	)
 }
 
