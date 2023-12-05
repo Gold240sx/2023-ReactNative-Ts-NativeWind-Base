@@ -5,8 +5,9 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay"
 
 const description = `
-# Animated Splash Screen
+# Air BnB Maps application
 
+current location article: https://medium.com/@Sarmilasivaraja/integrating-real-time-map-with-user-location-in-a-react-native-app-d0bef63ba3b2
 `
 
 const DayDetailsScreen = () => {
@@ -16,11 +17,8 @@ const DayDetailsScreen = () => {
 
 			<MarkdownDisplay>{description}</MarkdownDisplay>
 
-			<Link href="/day4/animation" asChild>
-				<Button title="Go to the animation" />
-			</Link>
-			<Link href="/day4/splashScreen" asChild>
-				<Button title="Go to the splash screen animation" />
+			<Link href="/day5/airbnb" asChild>
+				<Button title="Go to Map" />
 			</Link>
 		</SafeAreaView>
 	)
