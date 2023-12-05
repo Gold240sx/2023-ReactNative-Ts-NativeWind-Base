@@ -12,9 +12,7 @@ const description = `
 const DayDetailsScreen = () => {
 	return (
 		<SafeAreaView edges={["bottom"]} style={{ flex: 1 }}>
-			<Stack.Screen
-				options={{ title: "Day 4: Animated Splash  Screen" }}
-			/>
+			<Stack.Screen options={{ title: "Day 5: Maps" }} />
 
 			<MarkdownDisplay>{description}</MarkdownDisplay>
 
