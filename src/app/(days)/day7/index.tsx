@@ -8,7 +8,7 @@ const description = `
 #  Voice Memos
 
 ## In this module, We will cover: 
-- working with native audio and recording in react-native
+- working with native audio , microphone and recording in react-native
 `
 
 const DayDetailsScreen = () => {
@@ -16,7 +16,7 @@ const DayDetailsScreen = () => {
 		<SafeAreaView edges={["bottom"]} style={{ flex: 1 }}>
 			<Stack.Screen options={{ title: "Day 7: Voice Memos" }} />
 			<MarkdownDisplay>{description}</MarkdownDisplay>
-			<Link href="/day8/TinderScreen" asChild>
+			<Link href="/day7/Memo" asChild>
 				<Button title="Let's  record!" />
 			</Link>
 		</SafeAreaView>
