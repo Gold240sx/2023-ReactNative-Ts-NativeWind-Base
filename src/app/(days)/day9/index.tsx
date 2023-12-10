@@ -5,20 +5,17 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay"
 
 const description = `
-#  Voice Memos
-
-## In this module, We will cover: 
-- working with native audio , microphone and recording in react-native
-- playback recordings
+#  Tinder Cards
+A swipeable-animated tinder card functionality.
 `
 
 const DayDetailsScreen = () => {
 	return (
 		<SafeAreaView edges={["bottom"]} style={{ flex: 1 }}>
-			<Stack.Screen options={{ title: "Day 7: Voice Memos" }} />
+			<Stack.Screen options={{ title: "Day 6: Tinder Cards" }} />
 			<MarkdownDisplay>{description}</MarkdownDisplay>
-			<Link href="/day7/memos" asChild>
-				<Button title="Let's  record!" />
+			<Link href="/day6/TinderScreen" asChild>
+				<Button title="Swipe some cards!" />
 			</Link>
 		</SafeAreaView>
 	)
