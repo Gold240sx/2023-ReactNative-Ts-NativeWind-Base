@@ -28,7 +28,7 @@ export default function MemoListItem({ uri }: { uri: string }) {
 				return
 			}
 			if (newStatus.didJustFinish) {
-				console.warn("should restart")
+				// console.warn("should restart")
 				// await sound?.setPositionAsync(0)
 				sound?.setStatusAsync({ positionMillis: 0 })
 			}

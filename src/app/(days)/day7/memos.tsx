@@ -61,16 +61,16 @@ const MemosScreen = () => {
 
 	const animatedRedCircle = useAnimatedStyle(() => ({
 		width: withTiming(recording ? "85%" : "100%"),
-		borderRadius: withTiming(recording ? 5 : 50),
+		borderRadius: withTiming(recording ? 5 : 60),
 		height: withTiming(recording ? "85%" : "100%"),
-		padding: withTiming(recording ? 4 : 5),
+		padding: withTiming(recording ? 6 : 6),
 	}))
 
 	const AnimatedRecordButton = useAnimatedStyle(() => ({
 		borderRadius: withTiming(recording ? 14 : 50),
 		padding: withTiming(recording ? 2 : 4),
-		width: withSpring(recording ? 50 : 60),
-		height: withSpring(recording ? 50 : 60),
+		width: withSpring(recording ? 60 : 70),
+		height: withSpring(recording ? 60 : 70),
 	}))
 
 	return (
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	recordButton: {
-		borderRadius: 60,
+		borderRadius: 70,
 		borderWidth: 3,
 		borderColor: "gray",
 		alignItems: "center",
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
 	redCircle: {
 		backgroundColor: "orangered",
 		aspectRatio: 1,
-		borderRadius: 30,
+		borderRadius: 35,
 	},
 	name: {},
 	image: {},
