@@ -5,17 +5,17 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay"
 
 const description = `
-#  Tinder Cards
-A swipeable-animated tinder card functionality.
+#  Weather application
+  - data fetching from a pulic api (openWeather) into react-native
 `
 
 const DayDetailsScreen = () => {
 	return (
 		<SafeAreaView edges={["bottom"]} style={{ flex: 1 }}>
-			<Stack.Screen options={{ title: "Day 6: Tinder Cards" }} />
+			<Stack.Screen options={{ title: "Day 8: Weather App" }} />
 			<MarkdownDisplay>{description}</MarkdownDisplay>
-			<Link href="/day6/TinderScreen" asChild>
-				<Button title="Swipe some cards!" />
+			<Link href="/day8/WeatherApp" asChild>
+				<Button title="How cold is it?!!!!" />
 			</Link>
 		</SafeAreaView>
 	)

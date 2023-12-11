@@ -10,6 +10,8 @@ const description = `
 ## In this module, We will cover: 
 - working with native audio , microphone and recording in react-native
 - playback recordings
+- functions reducing and expanding the audio wavelength into a set number 
+	of wavelengths to handle very long/short audio clips. (Array averaging)
 `
 
 const DayDetailsScreen = () => {
