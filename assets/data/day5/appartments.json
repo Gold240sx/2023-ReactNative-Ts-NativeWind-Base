@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"lattitude": 37.779,
+		"longitude": -122.4194,
+		"price": 150,
+		"title": "Cozy Studio in Downtown SF",
+		"numberOfStars": 5,
+		"rating": 4.5,
+		"image": "https://placeholder.com/150"
+	},
+	{
+		"id": 2,
+		"lattitude": 37.775,
+		"longitude": -122.4313,
+		"price": 200,
+		"title": "Modern apartment near Golden Gate Park",
+		"numberOfStars": 4,
+		"rating": 4.8,
+		"image": "https://placeholder.com/150"
+	}
+]
