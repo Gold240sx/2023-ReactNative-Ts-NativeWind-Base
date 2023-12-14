@@ -5,8 +5,11 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay"
 
 const description = `
-#  Tinder Cards
-A swipeable-animated tinder card functionality.
+#  Auth Flow
+- AWS Amplify v6 Authentication
+- Set up amplify project
+- add authentication to the app
+- custom auth screens
 `
 
 const DayDetailsScreen = () => {
@@ -14,8 +17,8 @@ const DayDetailsScreen = () => {
 		<SafeAreaView edges={["bottom"]} style={{ flex: 1 }}>
 			<Stack.Screen options={{ title: "Day 6: Tinder Cards" }} />
 			<MarkdownDisplay>{description}</MarkdownDisplay>
-			<Link href="/day6/TinderScreen" asChild>
-				<Button title="Swipe some cards!" />
+			<Link href="/day9/TinderScreen" asChild>
+				<Button title="Let's log in!" />
 			</Link>
 		</SafeAreaView>
 	)
