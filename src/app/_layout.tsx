@@ -25,6 +25,11 @@ import * as SplashScreen from "expo-splash-screen"
 // SplashScreen.preventAutoHideAsync() //keeps the splashscreen visible as long as we are loading assets
 import Animated, { FadeIn } from "react-native-reanimated"
 
+// AWS
+import { Amplify } from "aws-amplify"
+import ampifyconfig from "../amplifyconfiguration.json"
+Amplify.configure(ampifyconfig)
+
 export default function RootLayout() {
 	const [appReady, setAppReady] = useState(false)
 	const [splashAnimationFinished, setSplashAnimationFinished] =
