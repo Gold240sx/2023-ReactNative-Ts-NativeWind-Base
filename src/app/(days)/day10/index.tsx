@@ -17,7 +17,7 @@ const DayDetailsScreen = () => {
 		<SafeAreaView edges={["bottom"]} style={{ flex: 1 }}>
 			<Stack.Screen options={{ title: "Day 6: Tinder Cards" }} />
 			<MarkdownDisplay>{description}</MarkdownDisplay>
-			<Link href="/day9/TinderScreen" asChild>
+			<Link href="/day9/protected" asChild>
 				<Button title="Let's log in!" />
 			</Link>
 		</SafeAreaView>
