@@ -29,6 +29,21 @@ import Animated, { FadeIn } from "react-native-reanimated"
 import { Amplify } from "aws-amplify"
 import ampifyconfig from "../amplifyconfiguration.json"
 Amplify.configure(ampifyconfig)
+import {
+	Authenticator,
+	ThemeProvider,
+	type Theme,
+} from "@aws-amplify/ui-react-native"
+
+const AmplifyTheme: Theme = {
+	tokens: {
+		colors: {
+			font: {
+				primary: "black",
+			},
+		},
+	},
+}
 
 export default function RootLayout() {
 	const [appReady, setAppReady] = useState(false)
@@ -65,20 +80,24 @@ export default function RootLayout() {
 	}
 
 	return (
-		<GestureHandlerRootView style={{ flex: 1 }}>
-			<PaperProvider theme={theme}>
-				{/* <PaperProvider store={store}> // if using something like redux*/}
+		<Authenticator.Provider>
+			<GestureHandlerRootView style={{ flex: 1 }}>
+				<ThemeProvider theme={AmplifyTheme}>
+					<PaperProvider theme={theme}>
+						{/* <PaperProvider store={store}> // if using something like redux*/}
 
-				<Animated.View style={{ flex: 1 }} entering={FadeIn}>
-					<Stack screenOptions={{}}>
-						<Stack.Screen
-							name="index"
-							options={{ title: "RN-TS-NT-Base" }}
-						/>
-					</Stack>
-				</Animated.View>
-			</PaperProvider>
-		</GestureHandlerRootView>
+						<Animated.View style={{ flex: 1 }} entering={FadeIn}>
+							<Stack screenOptions={{}}>
+								<Stack.Screen
+									name="index"
+									options={{ title: "RN-TS-NT-Base" }}
+								/>
+							</Stack>
+						</Animated.View>
+					</PaperProvider>
+				</ThemeProvider>
+			</GestureHandlerRootView>
+		</Authenticator.Provider>
 	)
 }
 

@@ -9,7 +9,8 @@ const description = `
 - AWS Amplify v6 Authentication
 - Set up amplify project
 - add authentication to the app
-- custom auth screens
+- custom auth screen  + a quick setup auth screen
+- control app flow with permissions
 `
 
 const DayDetailsScreen = () => {
@@ -20,9 +21,12 @@ const DayDetailsScreen = () => {
 			<Link href="/day9/protected" asChild>
 				<Button title="View Protected!" />
 			</Link>
-			<Link href="/day9/unprotected" asChild>
-				<Button title="View Un-Protected!" />
+			<Link href="/day9/auth/confirm-email" asChild>
+				<Button title="Confirm Email Page" />
 			</Link>
+			{/* <Link href="/day9/auth/sign-in" asChild>
+				<Button title="Sign in bro..." />
+			</Link> */}
 		</SafeAreaView>
 	)
 }
