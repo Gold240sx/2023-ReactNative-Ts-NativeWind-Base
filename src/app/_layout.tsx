@@ -34,6 +34,7 @@ import {
 	ThemeProvider,
 	type Theme,
 } from "@aws-amplify/ui-react-native"
+import BiometricsProvider from "@/components/day10/BiometricsProvider"
 
 const AmplifyTheme: Theme = {
 	tokens: {
@@ -80,24 +81,28 @@ export default function RootLayout() {
 	}
 
 	return (
-		<Authenticator.Provider>
-			<GestureHandlerRootView style={{ flex: 1 }}>
-				<ThemeProvider theme={AmplifyTheme}>
-					<PaperProvider theme={theme}>
-						{/* <PaperProvider store={store}> // if using something like redux*/}
+		<BiometricsProvider>
+			<Authenticator.Provider>
+				<GestureHandlerRootView style={{ flex: 1 }}>
+					<ThemeProvider theme={AmplifyTheme}>
+						<PaperProvider theme={theme}>
+							{/* <PaperProvider store={store}> // if using something like redux*/}
 
-						<Animated.View style={{ flex: 1 }} entering={FadeIn}>
-							<Stack screenOptions={{}}>
-								<Stack.Screen
-									name="index"
-									options={{ title: "RN-TS-NT-Base" }}
-								/>
-							</Stack>
-						</Animated.View>
-					</PaperProvider>
-				</ThemeProvider>
-			</GestureHandlerRootView>
-		</Authenticator.Provider>
+							<Animated.View
+								style={{ flex: 1 }}
+								entering={FadeIn}>
+								<Stack screenOptions={{}}>
+									<Stack.Screen
+										name="index"
+										options={{ title: "RN-TS-NT-Base" }}
+									/>
+								</Stack>
+							</Animated.View>
+						</PaperProvider>
+					</ThemeProvider>
+				</GestureHandlerRootView>
+			</Authenticator.Provider>
+		</BiometricsProvider>
 	)
 }
 

@@ -1,39 +1,43 @@
 {
-  "expo": {
-    "name": "2023ReactNative-Expo-TS-NativeWind-Paper-Base",
-    "slug": "2023 base setup",
-    "scheme": "2023baseSetup",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#EEEEEE"
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "ios"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png",
-      "bundler": "metro"
-    },
-    "plugins": [
-      "expo-router"
-    ],
-    "experiments": {
-      "tsconfigPaths": true
-    }
-  }
+	"expo": {
+		"name": "2023ReactNative-Expo-TS-NativeWind-Paper-Base",
+		"slug": "2023 base setup",
+		"scheme": "2023baseSetup",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "light",
+		"splash": {
+			"image": "./assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#EEEEEE"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "ios"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			}
+		},
+		"web": {
+			"favicon": "./assets/favicon.png",
+			"bundler": "metro"
+		},
+		"plugins": [
+			"expo-router",
+			[
+				"expo-local-authentication",
+				{
+					"faceIDPermission": "Allow user to authenticate via Face ID"
+				}
+			]
+		],
+		"experiments": {
+			"tsconfigPaths": true
+		}
+	}
 }

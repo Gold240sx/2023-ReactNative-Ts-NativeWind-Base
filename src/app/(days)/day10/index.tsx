@@ -5,20 +5,18 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay"
 
 const description = `
-#  Auth Flow
-- AWS Amplify v6 Authentication
-- Set up amplify project
-- add authentication to the app
-- custom auth screens
+#  Biometrics
+- Implement Finger Print / Face ID to unlock the next screens
+- Build an Additional security layer besides traditional authentication methods
 `
 
 const DayDetailsScreen = () => {
 	return (
 		<SafeAreaView edges={["bottom"]} style={{ flex: 1 }}>
-			<Stack.Screen options={{ title: "Day 6: Tinder Cards" }} />
+			<Stack.Screen options={{ title: "Day 10: Biometrics" }} />
 			<MarkdownDisplay>{description}</MarkdownDisplay>
-			<Link href="/day9/protected" asChild>
-				<Button title="Let's log in!" />
+			<Link href="/day10/protected" asChild>
+				<Button title="Run Biometrics" />
 			</Link>
 		</SafeAreaView>
 	)
