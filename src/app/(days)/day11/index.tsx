@@ -5,11 +5,9 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay"
 
 const description = `
-#  Auth Flow
-- AWS Amplify v6 Authentication
-- Set up amplify project
-- add authentication to the app
-- custom auth screens
+#  Camera App
+- Record and take photos
+- Save photos / recordings to the Photo's section
 `
 
 const DayDetailsScreen = () => {
